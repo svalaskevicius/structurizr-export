@@ -5,13 +5,14 @@ apply plugin: 'maven-publish'
 defaultTasks 'clean', 'compileJava', 'test'
 
 repositories {
+	  mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    implementation 'com.structurizr:structurizr-core:1.16.2'
+    implementation 'com.structurizr:structurizr-core:1.17.0-x1'
 
-    testImplementation 'com.structurizr:structurizr-client:1.16.2'
+    testImplementation 'com.structurizr:structurizr-client:1.17.0-x1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
 }
 

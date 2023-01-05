@@ -563,6 +563,7 @@ public abstract class AbstractDiagramExporter extends AbstractExporter implement
         }
 
         for (RelationshipView relationshipView : relationshipList) {
+            System.out.println(relationshipView);
             writeRelationship(view, relationshipView, writer);
         }
     }
