@@ -399,9 +399,9 @@ public class StructurizrPlantUMLExporter extends AbstractPlantUMLExporter {
             String sourceId = idOf(relationship.getSource());
             String destId = idOf(relationship.getDestination());
 
-            Boolean reversed = relationship.getTagsAsSet().contains("reversed") ||
+            Boolean reversed = relationship.getTagsAsSet().contains("reversed-flow") ||
                     "true".equalsIgnoreCase(getViewOrViewSetProperty(view,
-                            "plantuml.reversedRelation." + sourceId + "-" + destId, "false"));
+                            "plantuml.reversedFlowRelation." + sourceId + "-" + destId, "false"));
 
             if (reversed || (relationshipView.isResponse() != null && relationshipView.isResponse())) {
                 arrowStart = solid ? "<-" : "<.";
